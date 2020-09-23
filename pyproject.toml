@@ -27,11 +27,13 @@ packages = [
 [tool.poetry.plugins."mdformat.codeformatter"]
 "json" = "mdformat_config:format_json"
 "toml" = "mdformat_config:format_toml"
+"yaml" = "mdformat_config:format_yaml"
 
 [tool.poetry.dependencies]
 python = "^3.6"
 mdformat = ">=0.1.2"
 toml = ">=0.10.0"
+"ruamel.yaml" = ">=0.16.0"
 
 [tool.poetry.dev-dependencies]
 # Tests

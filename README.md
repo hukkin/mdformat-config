@@ -7,7 +7,7 @@
 ## Description
 mdformat-config is an [mdformat](https://github.com/executablebooks/mdformat) plugin
 that makes mdformat beautify configuration and data-serialization formats.
-Currently supported formats are JSON and TOML.
+Currently supported formats are JSON, TOML and YAML.
 
 ## Usage
 Install with:
