@@ -27,6 +27,6 @@ def test_format_yaml():
 
 
 def test_format_yaml__integration():
-    unformatted_md = f"```yaml\n{UNFORMATTED_YAML}```\n"
-    formatted_md = f"~~~yaml\n{FORMATTED_YAML}~~~\n"
+    unformatted_md = f"~~~yaml\n{UNFORMATTED_YAML}~~~\n"
+    formatted_md = f"```yaml\n{FORMATTED_YAML}```\n"
     assert mdformat.text(unformatted_md, codeformatters={"yaml"}) == formatted_md

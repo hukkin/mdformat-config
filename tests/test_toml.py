@@ -51,19 +51,19 @@ b-comment = "a is 3"
 
 
 def test_format_toml__integration():
-    unformatted_md = """```toml
+    unformatted_md = """~~~toml
 [animals]
 color =   "white"
 [cars]
 color      = "blue"
-```
+~~~
 """
-    formatted_md = """~~~toml
+    formatted_md = """```toml
 [animals]
 color = "white"
 
 [cars]
 color = "blue"
-~~~
+```
 """
     assert mdformat.text(unformatted_md, codeformatters={"toml"}) == formatted_md

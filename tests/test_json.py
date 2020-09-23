@@ -14,15 +14,15 @@ def test_format_json():
 
 
 def test_format_json__integration():
-    unformatted_md = """```json
+    unformatted_md = """~~~json
 {"a": 1, "b": 2}
-```
+~~~
 """
-    formatted_md = """~~~json
+    formatted_md = """```json
 {
   "a": 1,
   "b": 2
 }
-~~~
+```
 """
     assert mdformat.text(unformatted_md, codeformatters={"json"}) == formatted_md
