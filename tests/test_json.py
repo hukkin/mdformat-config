@@ -10,7 +10,7 @@ def test_format_json():
   "b": 2
 }
 """
-    assert mdformat_config.format_json(unformatted) == formatted
+    assert mdformat_config.format_json(unformatted, "") == formatted
 
 
 def test_format_json__integration():

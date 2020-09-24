@@ -47,7 +47,7 @@ fruits = "apple" # a = [1,2,3]
 a = 3
 b-comment = "a is 3"
 """
-    assert mdformat_config.format_toml(unformatted) == formatted
+    assert mdformat_config.format_toml(unformatted, "") == formatted
 
 
 def test_format_toml__integration():

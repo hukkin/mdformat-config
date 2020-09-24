@@ -8,17 +8,17 @@ import toml
 __version__ = "0.1.1"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 
 
-def format_json(unformatted: str) -> str:
+def format_json(unformatted: str, _info_str: str) -> str:
     parsed = json.loads(unformatted)
     return json.dumps(parsed, indent=2) + "\n"
 
 
-def format_toml(unformatted: str) -> str:
+def format_toml(unformatted: str, _info_str: str) -> str:
     parsed = toml.loads(unformatted, decoder=toml.TomlPreserveCommentDecoder())
     return toml.dumps(parsed, encoder=toml.TomlPreserveCommentEncoder())
 
 
-def format_yaml(unformatted: str) -> str:
+def format_yaml(unformatted: str, _info_str: str) -> str:
     yaml = ruamel.yaml.YAML()
     # Make sure to always have `sequence >= offset + 2`
     yaml.indent(mapping=2, sequence=2, offset=0)

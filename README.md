@@ -11,6 +11,6 @@ Currently supported formats are JSON, TOML and YAML.
 
 ## Usage
 Install with:
-```console
+```bash
 pip install mdformat-config
 ```

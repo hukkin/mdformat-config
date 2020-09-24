@@ -23,7 +23,7 @@ repos:
 
 
 def test_format_yaml():
-    assert mdformat_config.format_yaml(UNFORMATTED_YAML) == FORMATTED_YAML
+    assert mdformat_config.format_yaml(UNFORMATTED_YAML, "") == FORMATTED_YAML
 
 
 def test_format_yaml__integration():

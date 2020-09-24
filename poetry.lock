@@ -121,7 +121,7 @@ description = "CommonMark compliant Markdown formatter"
 name = "mdformat"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.2.0"
+version = "0.3.0"
 
 [package.dependencies]
 markdown-it-py = ">=0.4.7,<0.6.0"
@@ -332,7 +332,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "07e07a3e9cca564ddb43cb9e41311e40f6368d02537aa40cc98bd09c61494429"
+content-hash = "40500fa0aaea3709c97f9dc6ecdbb0dcaf0a7a57d89d4d5316a41716e10e2da6"
 lock-version = "1.0"
 python-versions = "^3.6"
 
@@ -378,8 +378,8 @@ markdown-it-py = [
     {file = "markdown_it_py-0.5.4-py3-none-any.whl", hash = "sha256:d1782446f7fcbf2db9a1bc0430230cb879498ad6d76168d7e7c762bab04cb4ea"},
 ]
 mdformat = [
-    {file = "mdformat-0.2.0-py3-none-any.whl", hash = "sha256:5427d56171bb7ca1be2186a600b0eb28d8b0c4428cd817c5ce527b1d6e4320b1"},
-    {file = "mdformat-0.2.0.tar.gz", hash = "sha256:3404be0d2fb4bcaa548d256fbc7ab5200ddf4abaeb2d7bc586b2663d09523558"},
+    {file = "mdformat-0.3.0-py3-none-any.whl", hash = "sha256:70f3e0a17e4d0758b87d92148fd13a06c0dbc1ff5e94cef11015bc5a781f229d"},
+    {file = "mdformat-0.3.0.tar.gz", hash = "sha256:ff6f243b6c0f1f188fca8ec8b7346262caa25bddb3e51a62cf88334cea9837a4"},
 ]
 more-itertools = [
     {file = "more-itertools-8.5.0.tar.gz", hash = "sha256:6f83822ae94818eae2612063a5101a7311e68ae8002005b5e05f03fd74a86a20"},
