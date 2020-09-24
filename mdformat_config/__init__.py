@@ -5,7 +5,7 @@ import ruamel.yaml
 import toml
 
 
-__version__ = "0.1.1"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
+__version__ = "0.1.2"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 
 
 def format_json(unformatted: str, _info_str: str) -> str:
