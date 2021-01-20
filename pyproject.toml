@@ -15,7 +15,7 @@ classifiers = [
     "Topic :: Documentation",
     "Topic :: Text Processing :: Markup",
 ]
-keywords = ["mdformat", "json", "markdown", "commonmark", "formatter"]
+keywords = ["mdformat", "json", "yaml", "toml", "markdown", "commonmark", "formatter"]
 
 packages = [
     {include = "mdformat_config"},

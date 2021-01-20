@@ -1,11 +1,10 @@
+__version__ = "0.1.2"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
+
 import io
 import json
 
 import ruamel.yaml
 import toml
-
-
-__version__ = "0.1.2"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 
 
 def format_json(unformatted: str, _info_str: str) -> str:
@@ -21,7 +20,7 @@ def format_toml(unformatted: str, _info_str: str) -> str:
 def format_yaml(unformatted: str, _info_str: str) -> str:
     yaml = ruamel.yaml.YAML()
     # Make sure to always have `sequence >= offset + 2`
-    yaml.indent(mapping=2, sequence=2, offset=0)
+    yaml.indent(mapping=2, sequence=4, offset=2)
 
     parsed = yaml.load(unformatted)
     dump_stream = io.StringIO()

@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/hukkinj1/mdformat-config/workflows/Tests/badge.svg?branch=master)](<https://github.com/hukkinj1/mdformat-config/actions?query=workflow%3ATests+branch%3Amaster+event%3Apush>)
-[![PyPI version](https://badge.fury.io/py/mdformat-config.svg)](<https://badge.fury.io/py/mdformat-config>)
+[![PyPI version](https://img.shields.io/pypi/v/mdformat-config)](https://pypi.org/project/mdformat-config)
 
 # mdformat-config
 > Mdformat plugin to beautify configuration and data-serialization formats
@@ -9,8 +9,12 @@ mdformat-config is an [mdformat](https://github.com/executablebooks/mdformat) pl
 that makes mdformat beautify configuration and data-serialization formats.
 Currently supported formats are JSON, TOML and YAML.
 
-## Usage
-Install with:
+## Installing
 ```bash
 pip install mdformat-config
+```
+
+## Usage
+```bash
+mdformat YOUR_MARKDOWN_FILE.md
 ```

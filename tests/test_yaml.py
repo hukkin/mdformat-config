@@ -5,20 +5,20 @@ import mdformat
 
 UNFORMATTED_YAML = """# Comment here
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: e1668fe86af3810fbca72b8653fe478e66a0afdc  # frozen: v3.2.0
-    hooks:
-      - id: check-yaml
-      - id: check-toml
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: e1668fe86af3810fbca72b8653fe478e66a0afdc # frozen: v3.2.0
+  hooks:
+  - id: check-yaml
+  - id: check-toml
 """
 
 FORMATTED_YAML = """# Comment here
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: e1668fe86af3810fbca72b8653fe478e66a0afdc    # frozen: v3.2.0
-  hooks:
-  - id: check-yaml
-  - id: check-toml
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: e1668fe86af3810fbca72b8653fe478e66a0afdc # frozen: v3.2.0
+    hooks:
+      - id: check-yaml
+      - id: check-toml
 """
 
 
