@@ -1,4 +1,4 @@
-__version__ = "0.1.2"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
+__version__ = "0.1.3"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 
 import io
 import json
