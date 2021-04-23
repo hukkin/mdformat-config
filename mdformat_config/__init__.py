@@ -6,6 +6,10 @@ import json
 import ruamel.yaml
 import toml
 
+yaml = ruamel.yaml.YAML()
+# Make sure to always have `sequence >= offset + 2`
+yaml.indent(mapping=2, sequence=4, offset=2)
+
 
 def format_json(unformatted: str, _info_str: str) -> str:
     parsed = json.loads(unformatted)
@@ -18,10 +22,6 @@ def format_toml(unformatted: str, _info_str: str) -> str:
 
 
 def format_yaml(unformatted: str, _info_str: str) -> str:
-    yaml = ruamel.yaml.YAML()
-    # Make sure to always have `sequence >= offset + 2`
-    yaml.indent(mapping=2, sequence=4, offset=2)
-
     parsed = yaml.load(unformatted)
     dump_stream = io.StringIO()
     yaml.dump(parsed, stream=dump_stream)

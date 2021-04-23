@@ -30,7 +30,7 @@ packages = [
 "yaml" = "mdformat_config:format_yaml"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.1"
 mdformat = ">=0.3.0"
 toml = ">=0.10.0"
 "ruamel.yaml" = ">=0.16.0"
