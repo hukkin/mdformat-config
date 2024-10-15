@@ -40,10 +40,9 @@ color = "gray" # Hello World
 #   All other whitespace
 #   is preserved.
 # '''
-
 [animals]
-color = "gray" # col
-fruits = "apple" # a = [1,2,3]
+color = "gray"       # col
+fruits = "apple"     # a = [1,2,3]
 a = 3
 b-comment = "a is 3"
 """
@@ -61,7 +60,6 @@ color      = "blue"
     formatted_md = """```toml
 [animals]
 color = "white"
-
 [cars]
 color = "blue"
 ```
