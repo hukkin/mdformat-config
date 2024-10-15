@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "mdformat-config"
-version = "0.1.3"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
+version = "0.2.0"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILITY DO IT
 authors = ["Taneli Hukkinen <hukkin@users.noreply.github.com>"]
 description = "Mdformat plugin to beautify configuration and data-serialization formats"
 repository = "https://github.com/hukkin/mdformat-config"
