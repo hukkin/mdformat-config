@@ -2,9 +2,9 @@ __version__ = "0.1.3"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILIT
 
 import io
 import json
+import subprocess
 
 import ruamel.yaml
-import toml
 
 yaml = ruamel.yaml.YAML()
 # Make sure to always have `sequence >= offset + 2`
@@ -17,8 +17,25 @@ def format_json(unformatted: str, _info_str: str) -> str:
 
 
 def format_toml(unformatted: str, _info_str: str) -> str:
-    parsed = toml.loads(unformatted, decoder=toml.TomlPreserveCommentDecoder())
-    return toml.dumps(parsed, encoder=toml.TomlPreserveCommentEncoder())
+    unformatted_bytes = unformatted.encode()
+    result = subprocess.run(
+        [
+            "taplo",
+            "fmt",
+            "--no-auto-config",
+            "--colors",
+            "never",
+            "--option",
+            "array_auto_collapse=false",
+            "-",
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        input=unformatted_bytes,
+    )
+    if result.returncode:
+        raise Exception("Failed to format TOML")
+    return result.stdout.decode()
 
 
 def format_yaml(unformatted: str, _info_str: str) -> str:
