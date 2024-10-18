@@ -5,6 +5,7 @@ import json
 import subprocess
 from pathlib import Path
 import sys
+import os
 
 import ruamel.yaml
 
@@ -40,7 +41,8 @@ def format_toml(unformatted: str, _info_str: str) -> str:
         # taplo is not in path if the user installed with e.g.
         # `pipx install mdformat && pipx inject mdformat mdformat-config`
         # Try to look for taplo binary in the virtual environment.
-        taplo_path = Path(sys.executable).parent / "taplo"
+        taplo_bin_name = "taplo.exe" if os.name == "nt" else "taplo"
+        taplo_path = Path(sys.executable).parent / taplo_bin_name
         result = subprocess.run([str(taplo_path)] + taplo_args, **subprocess_kwargs)
 
     if result.returncode:

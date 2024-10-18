@@ -1,9 +1,7 @@
 import subprocess
 from unittest.mock import patch
-import os
 
 import mdformat
-import pytest
 
 import mdformat_config
 
@@ -72,10 +70,6 @@ color = "blue"
     assert mdformat.text(unformatted_md, codeformatters={"toml"}) == formatted_md
 
 
-@pytest.mark.skipif(
-    os.name == "nt",
-    reason="I don't have access to a Windows machine",
-)
 def test_taplo_not_in_path():
     """Test taplo binary discovery fallback if taplo not in $PATH."""
     input_ = """\
