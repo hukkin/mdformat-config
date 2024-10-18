@@ -1,3 +1,6 @@
+import subprocess
+from unittest.mock import patch
+
 import mdformat
 
 import mdformat_config
@@ -65,3 +68,29 @@ color = "blue"
 ```
 """
     assert mdformat.text(unformatted_md, codeformatters={"toml"}) == formatted_md
+
+
+def test_taplo_not_in_path():
+    """Test taplo binary discovery fallback if taplo not in $PATH."""
+    input_ = """\
+~~~toml
+      [         find-taplo]
+~~~
+"""
+    expected_output = """\
+```toml
+[find-taplo]
+```
+"""
+
+    unmocked_run = subprocess.run
+
+    def no_taplo_run(*args, **kwargs):
+        """Make subprocess.run think that `taplo` is not in $PATH."""
+        if args[0][0] == "taplo":
+            raise FileNotFoundError
+        return unmocked_run(*args, **kwargs)
+
+    with patch("mdformat_config.subprocess.run", new=no_taplo_run):
+        output = mdformat.text(input_, codeformatters={"toml"})
+    assert output == expected_output
