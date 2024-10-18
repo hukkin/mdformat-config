@@ -3,8 +3,8 @@ __version__ = "0.2.0"  # DO NOT EDIT THIS LINE MANUALLY. LET bump2version UTILIT
 import io
 import json
 import subprocess
-import sys
 from pathlib import Path
+import os
 
 import ruamel.yaml
 
@@ -42,10 +42,8 @@ def format_toml(unformatted: str, _info_str: str) -> str:
         #
         # Try to look for taplo binary in the virtual environment, in the same
         # directory where Python executable is.
-        py_exec_path = sys.executable
-        if not py_exec_path:
-            raise Exception("Could not find path to taplo binary")
-        taplo_path = Path(py_exec_path).parent / "taplo"
+        venv_path = Path(os.environ["VIRTUAL_ENV"])
+        taplo_path = venv_path / "bin" / "taplo"
         result = subprocess.run([str(taplo_path)] + taplo_args, **subprocess_kwargs)
 
     if result.returncode:
